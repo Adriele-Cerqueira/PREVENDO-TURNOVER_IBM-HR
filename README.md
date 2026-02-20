@@ -16,53 +16,46 @@ Dataset público para fins educacionais, disponibilizado pela IBM e amplamente u
 Disponível no Kaggle.
 
 ## 🔎 Metodologia
+Importação de Bibliotecas: Pandas, Scikit-learn, Seaborn, Matplotlib
 
-Análise exploratória dos dados
+Carregamento de Dados: IBM HR Analytics → DataFrame Pandas
 
-Tratamento e preparação das variáveis
+Análise Exploratória (EDA): estatísticas descritivas, distribuição de variáveis, padrões de turnover
 
-Divisão treino/teste (75% / 25%)
+Pré-processamento: Label Encoding em variáveis categóricas
 
-Teste de três modelos:
+Divisão de Dados: treino 75% / teste 25%, stratify=y, random_state=42
 
-Regressão Logística
+Modelagem Preditiva: Regressão Logística, Random Forest, XGBoost
 
-Random Forest
+Ajuste de Hiperparâmetros: número de árvores, profundidade, taxa de aprendizado
 
-XGBoost
+Avaliação de Modelos: Recall, Precision, F1-Score, AUC, matriz de confusão
 
-Avaliação com foco em:
-
-Recall (principal métrica)
-
-AUC
-
-Matriz de confusão
-
-Análise de overfitting
+Seleção do Modelo: foco em recall e falsos negativos mínimos para suportar decisões de RH
 
 ## 🛠 Skills e Ferramentas
 
-Python
+Análise de Dados: exploração, limpeza e pré-processamento de dados
 
-Pandas
+Modelagem Preditiva: Regressão Logística, Random Forest, XGBoost
 
-Scikit-learn
+Programação: Python (Pandas, Scikit-learn, Seaborn, Matplotlib)
 
-XGBoost
+Machine Learning: tratamento de desbalanceamento, ajuste de hiperparâmetros, avaliação de métricas
 
-Matplotlib
+Visualização de Dados: gráficos e análise de padrões para suportar decisões de negócio
+
+Interpretação de Modelos: insights sobre fatores de risco de turnover e apoio estratégico em RH
 
 ## 📈 Resultados e Recomendações
 
-resultados ....
+As análises identificaram fatores de risco e proteção para turnover. Funcionários solteiros e que realizam hora extra apresentam maior probabilidade de desligamento, enquanto cargos mais altos, maior remuneração e maior tempo com o gestor reduzem o risco. O modelo preditivo final (Regressão Logística) confirmou esses padrões, destacando-se na identificação de colaboradores em risco, fornecendo insights estratégicos para ações de retenção e gestão de talentos.
 
  <img src="https://github.com/Adriele-Cerqueira/PREVENDO-TURNOVER_IBM-HR/blob/main/Correlacao%20Vari%C3%A1veis.png" width="550">
 
 Dataset desbalanceado (~16% de attrition).
-
 Modelos mais complexos não trouxeram ganho estratégico relevante.
-
 O modelo escolhido priorizou maior recall e menor número de falsos negativos.
 
  <img src="https://github.com/Adriele-Cerqueira/PREVENDO-TURNOVER_IBM-HR/blob/main/Curva%20ROC.png" width="550">
