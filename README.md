@@ -62,13 +62,20 @@ Matplotlib
 
 ## 📈 Resultados e Recomendações
 
+resultados ....
+
+ <img src="https://github.com/Adriele-Cerqueira/PREVENDO-TURNOVER_IBM-HR/blob/main/Correlacao%20Vari%C3%A1veis.png" width="550">
+
 Dataset desbalanceado (~16% de attrition).
 
 Modelos mais complexos não trouxeram ganho estratégico relevante.
 
 O modelo escolhido priorizou maior recall e menor número de falsos negativos.
 
-Recomendação: implementar um score de risco de turnover para apoiar ações preventivas do RH.
+ <img src="https://github.com/Adriele-Cerqueira/PREVENDO-TURNOVER_IBM-HR/blob/main/Curva%20ROC.png" width="550">
+ 
+ <img src="https://github.com/Adriele-Cerqueira/PREVENDO-TURNOVER_IBM-HR/blob/main/Comparativo%20Modelos.png" width="550">
+
 
 ## 🚀 Próximos Passos
 
