@@ -6,15 +6,7 @@ Projeto de modelagem preditiva para identificar colaboradores com maior risco de
 
 ## 🎯 Problema de Negócio
 
-Turnover inesperado gera:
-
-Custos de contratação e treinamento
-
-Perda de conhecimento
-
-Redução de produtividade
-
-O objetivo é antecipar desligamentos para apoiar decisões estratégicas do RH.
+O turnover representa a saída de colaboradores da empresa, gerando custos com recrutamento, treinamento e perda de conhecimento interno. Quando ocorre de forma inesperada, impacta a produtividade, o clima organizacional e os resultados financeiros. O principal desafio de negócio é antecipar esses desligamentos para permitir ações preventivas e reduzir perdas.
 
 ## 📊 Fonte dos Dados
 
