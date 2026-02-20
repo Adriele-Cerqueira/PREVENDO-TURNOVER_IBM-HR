@@ -2,11 +2,12 @@
 
 ## 📌 Resumo Executivo
 
-Projeto de modelagem preditiva para identificar colaboradores com maior risco de desligamento (turnover), permitindo ações preventivas da área de RH. A escolha do modelo considerou não apenas desempenho estatístico, mas principalmente impacto estratégico no negócio.
+Projeto de modelagem preditiva para identificar colaboradores com maior risco de desligamento (turnover), permitindo ações preventivas da área de RH. 
 
 ## 🎯 Problema de Negócio
 
-O turnover representa a saída de colaboradores da empresa, gerando custos com recrutamento, treinamento e perda de conhecimento interno. Quando ocorre de forma inesperada, impacta a produtividade, o clima organizacional e os resultados financeiros. O principal desafio de negócio é antecipar esses desligamentos para permitir ações preventivas e reduzir perdas.
+Altas taxas de turnover geram custos com reposição, perda de conhecimento e impacto na produtividade. O desafio é reduzir desligamentos inesperados e melhorar a retenção de talentos. A escolha do modelo considerou não apenas desempenho estatístico, mas principalmente impacto estratégico no negócio.
+
 
 ## 📊 Fonte dos Dados
 
