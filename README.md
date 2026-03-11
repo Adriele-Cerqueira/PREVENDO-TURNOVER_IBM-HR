@@ -80,9 +80,13 @@ Após a coleta, os dados passaram por etapas de **limpeza, transformação e pre
 
 ## Resultados e Recomendações de Negócio
 
-A análise revelou que **determinados fatores comportamentais e organizacionais aumentam significativamente o risco de turnover**.  
+Através do EDA ( Análise Explorátoria dos Dados), identificamos algumas variáveis que podem estar relacionadas ao desligamento de um funcionário, váriaveis como Status Civil, Frequencia de Viagem e Satisfação no Trabalho.
 
-O modelo escolhido foi a **Regressão Logística, que apresentou o melhor desempenho para o objetivo do negócio**, alcançando:
+ <img src="https://github.com/Adriele-Cerqueira/PREVENDO-TURNOVER_IBM-HR/blob/main/Correlacao%20Vari%C3%A1veis.png" width="550">
+
+E percebemos pela correlação que  **determinados fatores comportamentais e organizacionais aumentam significativamente o risco de turnover**.  
+
+Afim de estimarmos uma probabilidade e também prever desligamento, foi testado três modelos : Logistica, XGBoost, Random Forest e o modelo escolhido foi a **Regressão Logística, que apresentou o melhor desempenho para o objetivo do negócio**, alcançando:
 
 - **AUC:** 0,77  
 - **Recall:** 66% na detecção de desligamentos  
@@ -92,7 +96,7 @@ O modelo escolhido foi a **Regressão Logística, que apresentou o melhor desemp
   
 <img src="https://github.com/Adriele-Cerqueira/PREVENDO-TURNOVER_IBM-HR/blob/main/Comparativo%20Modelos.png" width="550">
 
-Com esse modelo, e as análises exploratórias foi possível observar que **funcionários que realizam horas extras, possuem menor satisfação no trabalho e apresentam menor tempo de empresa** possuem maior probabilidade de desligamento.
+Com esse modelo, e as análises exploratórias foi possível observar que **funcionários que realizam horas extras, são solteiros, que possuem menor satisfação no trabalho e apresentam menor tempo de empresa** possuem maior probabilidade de desligamento.
 
 Principais fatores associados ao risco de saída:
 
@@ -100,8 +104,6 @@ Principais fatores associados ao risco de saída:
 - Colaboradores **solteiros apresentam maior probabilidade de desligamento**
 - Funcionários do **departamento de vendas possuem maior risco**
 - **Maior satisfação no ambiente de trabalho reduz o turnover**
-
- <img src="https://github.com/Adriele-Cerqueira/PREVENDO-TURNOVER_IBM-HR/blob/main/Correlacao%20Vari%C3%A1veis.png" width="550">
  
 Com base nesses achados, recomenda-se:
 
