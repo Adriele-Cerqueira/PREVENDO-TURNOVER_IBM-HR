@@ -1,74 +1,122 @@
-# MODELO PREDITIVO TURNOVER DA BASE IBM HR
+# MODELO PREDITIVO TURNOVER DA BASE IBM HR 
  <img src="https://github.com/Adriele-Cerqueira/PREVENDO-TURNOVER_IBM-HR/blob/main/Capa_Turnover.png" width="550">
  
-## 📌 Resumo Executivo
+## Resumo Executivo
+Este projeto teve como objetivo **prever a probabilidade de desligamento de colaboradores (turnover)** utilizando técnicas de ciência de dados e machine learning.  
+A partir da modelagem preditiva e análise exploratória, foi possível identificar **fatores organizacionais e comportamentais que aumentam o risco de saída de funcionários**.  
+Os resultados podem apoiar decisões estratégicas de **retenção de talentos e gestão de pessoas**.
 
-Projeto de modelagem preditiva para identificar colaboradores com maior risco de desligamento (turnover), permitindo ações preventivas da área de RH. 
+---
 
-## 🎯 Problema de Negócio
+## Problema de Negócio
+Empresas frequentemente enfrentam desafios relacionados ao **alto índice de rotatividade de colaboradores**, o que gera custos com recrutamento, treinamento e perda de conhecimento organizacional.  
 
-Altas taxas de turnover geram custos com reposição, perda de conhecimento e impacto na produtividade. O desafio é reduzir desligamentos inesperados e melhorar a retenção de talentos. A escolha do modelo considerou não apenas desempenho estatístico, mas principalmente impacto estratégico no negócio.
+Neste cenário, compreender **quais fatores influenciam a saída de funcionários** torna-se essencial para melhorar estratégias de retenção e gestão de pessoas.  
 
+Este projeto busca responder à seguinte questão de negócio:  
+**É possível prever quais colaboradores possuem maior probabilidade de deixar a empresa com base em características comportamentais, demográficas e organizacionais?**
 
-## 📊 Fonte dos Dados
+---
 
-IBM HR Analytics Employee Attrition & Performance
-Dataset público para fins educacionais, disponibilizado pela IBM e amplamente utilizado em estudos de People Analytics.
-Disponível no Kaggle.
+## Fonte de Dados
+Os dados utilizados neste projeto foram obtidos a partir de **um dataset público disponibilizado no Kaggle – IBM HR Analytics Attrition Dataset**.  
 
-## 🔎 Metodologia
-Importação de Bibliotecas: Pandas, Scikit-learn, Seaborn, Matplotlib
+O dataset contém informações relacionadas a:
 
-Carregamento de Dados: IBM HR Analytics → DataFrame Pandas
+- Cargo e departamento
+- Remuneração e benefícios
+- Satisfação no trabalho
+- Tempo de empresa
+- Horas extras
+- Informações demográficas dos colaboradores
 
-Análise Exploratória (EDA): estatísticas descritivas, distribuição de variáveis, padrões de turnover
+Após a coleta, os dados passaram por etapas de **limpeza, transformação e preparação** para análise e modelagem preditiva.
 
-Pré-processamento: Label Encoding em variáveis categóricas
+---
 
-Divisão de Dados: treino 75% / teste 25%, stratify=y, random_state=42
+## Metodologia
 
-Modelagem Preditiva: Regressão Logística, Random Forest, XGBoost
+- Coleta e importação do dataset utilizando KaggleHub
+- Análise exploratória dos dados (EDA)
+- Verificação de inconsistências e valores ausentes
+- Análise de distribuição da variável de turnover
+- Construção de visualizações analíticas para identificação de padrões
+- Criação de matriz de correlação com variáveis relevantes
+- Transformação de variáveis categóricas utilizando One-Hot Encoding
+- Separação das variáveis preditoras (X) e variável alvo (Attrition)
+- Divisão dos dados em treino (75%) e teste (25%) com stratify
+- Construção e comparação de modelos de classificação
+- Avaliação com métricas: Recall, Precision, F1-Score e AUC
+- Análise de overfitting comparando desempenho treino vs teste
+- Interpretação dos resultados sob perspectiva de negócio
 
-Ajuste de Hiperparâmetros: número de árvores, profundidade, taxa de aprendizado
+---
 
-Avaliação de Modelos: Recall, Precision, F1-Score, AUC, matriz de confusão
+## Skills e Ferramentas
 
-Seleção do Modelo: foco em recall e falsos negativos mínimos para suportar decisões de RH
+**Linguagens**
+- Python
+- SQL
 
-## 🛠 Skills e Ferramentas
+**Bibliotecas**
+- Pandas
+- NumPy
+- Scikit-Learn
+- Matplotlib
+- Seaborn
+- XGBoost
 
-Análise de Dados: exploração, limpeza e pré-processamento de dados
+**Ferramentas de BI**
+- Power BI
 
-Modelagem Preditiva: Regressão Logística, Random Forest, XGBoost
+**Banco de Dados**
+- SQL / Oracle / PostgreSQL
 
-Programação: Python (Pandas, Scikit-learn, Seaborn, Matplotlib)
+**Versionamento**
+- Git
+- GitHub
 
-Machine Learning: tratamento de desbalanceamento, ajuste de hiperparâmetros, avaliação de métricas
+---
 
-Visualização de Dados: gráficos e análise de padrões para suportar decisões de negócio
+## Resultados e Recomendações de Negócio
 
-Interpretação de Modelos: insights sobre fatores de risco de turnover e apoio estratégico em RH
+A análise revelou que **determinados fatores comportamentais e organizacionais aumentam significativamente o risco de turnover**.  
 
-## 📈 Resultados e Recomendações
+O modelo escolhido foi a **Regressão Logística, que apresentou o melhor desempenho para o objetivo do negócio**, alcançando:
 
-As análises identificaram fatores de risco e proteção para turnover. Funcionários solteiros e que realizam hora extra apresentam maior probabilidade de desligamento, enquanto cargos mais altos, maior remuneração e maior tempo com o gestor reduzem o risco. O modelo preditivo final (Regressão Logística) confirmou esses padrões, destacando-se na identificação de colaboradores em risco, fornecendo insights estratégicos para ações de retenção e gestão de talentos.
+- **AUC:** 0,77  
+- **Recall:** 66% na detecção de desligamentos  
+- **Menor número de falsos negativos entre os modelos testados**
+ 
+<img src="https://github.com/Adriele-Cerqueira/PREVENDO-TURNOVER_IBM-HR/blob/main/Curva%20ROC.png" width="550">
+  
+<img src="https://github.com/Adriele-Cerqueira/PREVENDO-TURNOVER_IBM-HR/blob/main/Comparativo%20Modelos.png" width="550">
+
+Com esse modelo, e as análises exploratórias foi possível observar que **funcionários que realizam horas extras, possuem menor satisfação no trabalho e apresentam menor tempo de empresa** possuem maior probabilidade de desligamento.
+
+Principais fatores associados ao risco de saída:
+
+- Funcionários que realizam **hora extra têm cerca de 69% mais chance de sair**
+- Colaboradores **solteiros apresentam maior probabilidade de desligamento**
+- Funcionários do **departamento de vendas possuem maior risco**
+- **Maior satisfação no ambiente de trabalho reduz o turnover**
 
  <img src="https://github.com/Adriele-Cerqueira/PREVENDO-TURNOVER_IBM-HR/blob/main/Correlacao%20Vari%C3%A1veis.png" width="550">
-
-Dataset desbalanceado (~16% de attrition).
-Modelos mais complexos não trouxeram ganho estratégico relevante.
-O modelo escolhido priorizou maior recall e menor número de falsos negativos.
-
- <img src="https://github.com/Adriele-Cerqueira/PREVENDO-TURNOVER_IBM-HR/blob/main/Curva%20ROC.png" width="550">
  
- <img src="https://github.com/Adriele-Cerqueira/PREVENDO-TURNOVER_IBM-HR/blob/main/Comparativo%20Modelos.png" width="550">
+Com base nesses achados, recomenda-se:
 
+- Direcionar estratégias de retenção para **equipes com maior carga de horas extras**
+- Monitorar continuamente **indicadores de satisfação dos colaboradores**
+- Criar políticas de incentivo e benefícios para **reduzir riscos de desligamento**
 
-## 🚀 Próximos Passos
+Essas ações podem contribuir para **redução do turnover e otimização da gestão de talentos**.
 
-Avaliar novos modelos visando maior desempenho preditivo, ou seja, previsões mais precisas
+---
 
-Desenvolver dashboard para acompanhamento contínuo
+## Próximos Passos
 
-Evoluir para análise baseada em impacto financeiro
+- **Integração com novos dados:** incorporar dados reais da empresa para aumentar a robustez do modelo.
 
+- **Automação da pipeline de dados:** estruturar processos automatizados para atualização contínua das análises.
+
+- **Evolução do modelo analítico:** testar novas abordagens de machine learning e técnicas de balanceamento de classes para melhorar a performance preditiva.
