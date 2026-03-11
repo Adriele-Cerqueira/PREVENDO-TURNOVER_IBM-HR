@@ -1,5 +1,6 @@
 # MODELO PREDITIVO TURNOVER DA BASE IBM HR
-
+ <img src="https://github.com/Adriele-Cerqueira/PREVENDO-TURNOVER_IBM-HR/blob/main/Capa_Turnover.png" width="550">
+ 
 ## 📌 Resumo Executivo
 
 Projeto de modelagem preditiva para identificar colaboradores com maior risco de desligamento (turnover), permitindo ações preventivas da área de RH. 
